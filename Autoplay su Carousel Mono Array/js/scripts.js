@@ -24,31 +24,46 @@ console.log(carouselcontainer)
 let arrayClass = document.getElementsByClassName("specialclass");
 arrayClass[active].classList.add('active');
 
-let right = document.querySelector(".rightarrow");
-let left = document.querySelector(".leftarrow");
+const myTimeout = setInterval(myAutoCarousel, 3000);
+function myAutoCarousel() {
+    
+        if (active == imgItems.length -1) {
+           active = 0;
+        } else {
+           active++;
+        }
 
-right.addEventListener("click", function(){
+        document.querySelector(".specialclass.active").classList.remove('active');
+        arrayClass[active].classList.add('active');
+    
+}
 
-     if (active == imgItems.length -1) {
-          active = 0;
-     } else {
-          active++;
-     }
+
+// let right = document.querySelector(".rightarrow");
+// let left = document.querySelector(".leftarrow");
+
+// right.addEventListener("click", function(){
+
+//      if (active == imgItems.length -1) {
+//           active = 0;
+//      } else {
+//           active++;
+//      }
  
-     document.querySelector(".specialclass.active").classList.remove('active');
-     arrayClass[active].classList.add('active');
+//      document.querySelector(".specialclass.active").classList.remove('active');
+//      arrayClass[active].classList.add('active');
 
-})
+// })
 
-left.addEventListener("click", function(){
+// left.addEventListener("click", function(){
      
-     if (active == 0) {
-          active = imgItems.length -1;
-     } else {
-          active--;
-     }
+//      if (active == 0) {
+//           active = imgItems.length -1;
+//      } else {
+//           active--;
+//      }
 
-     // active--; 
-     document.querySelector(".specialclass.active").classList.remove('active');
-     arrayClass[active].classList.add('active');
-})
+//      // active--; 
+//      document.querySelector(".specialclass.active").classList.remove('active');
+//      arrayClass[active].classList.add('active');
+// })
