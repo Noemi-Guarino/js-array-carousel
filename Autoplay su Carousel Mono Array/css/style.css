@@ -18,7 +18,7 @@
     width: 30%;
     margin: 0 auto;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-around;
     align-items: center;
 }
@@ -50,3 +50,29 @@ img{
     display: block;
 }
 
+.btn3{
+    display:inline-block;
+    padding:1em 2em;
+    border-radius: 20px;
+    margin:0.03em;
+    box-sizing: border-box;
+    text-decoration:none;
+    font-family:"arial";
+    font-weight:300;
+    color:#FDFDFD;
+    text-align:center;
+    transition: 0.2s;
+    background:rgb(123,135,255);
+    cursor:pointer;
+    font-weight:bold;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-top: 20px;
+  }
+  .btn3:hover{
+    background:rgb(96,110,255);
+  }
+  .btn3:active, .btn3:focus{
+    background:rgb(195,200,255);
+    color:rgb(96,110,255);
+  }

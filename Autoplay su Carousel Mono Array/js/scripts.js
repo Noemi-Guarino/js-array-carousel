@@ -24,7 +24,7 @@ console.log(carouselcontainer)
 let arrayClass = document.getElementsByClassName("specialclass");
 arrayClass[active].classList.add('active');
 
-const myTimeout = setInterval(myAutoCarousel, 3000);
+const myTimeout = setInterval(myAutoCarousel, 1000);
 function myAutoCarousel() {
     
         if (active == imgItems.length -1) {
@@ -38,6 +38,9 @@ function myAutoCarousel() {
     
 }
 
+function myStopFunction() {
+    clearTimeout(myTimeout);
+}
 
 // let right = document.querySelector(".rightarrow");
 // let left = document.querySelector(".leftarrow");
