@@ -1,4 +1,4 @@
-let carouselcontainer = document.querySelector(".carousel_container");
+      let carouselcontainer = document.querySelector(".carousel_container");
 
 //  carouselcontainer.innerHTML +=
 //      `<div><img src="img/01.webp" alt=""></div>`;
@@ -24,7 +24,7 @@ console.log(carouselcontainer)
 let arrayClass = document.getElementsByClassName("specialclass");
 arrayClass[active].classList.add('active');
 
-const myTimeout = setInterval(myAutoCarousel, 1000);
+const myTimeout = setInterval(myAutoCarousel, 3000);
 function myAutoCarousel() {
     
         if (active == imgItems.length -1) {
@@ -39,7 +39,7 @@ function myAutoCarousel() {
 }
 
 function myStopFunction() {
-    clearTimeout(myTimeout);
+   clearInterval(myTimeout);
 }
 
 // let right = document.querySelector(".rightarrow");
